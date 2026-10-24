@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCalc — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0A0E17;
+            color: #E5E7EB;
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #00E5FF;
+            top: -120px;
+            right: -120px;
+            animation: float 14s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: #C6FF00;
+            bottom: -120px;
+            left: -120px;
+            animation: float 18s ease-in-out infinite reverse;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: #FF6B6B;
+            top: 50%;
+            right: -150px;
+            animation: float 22s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-40px, 40px); }
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 0 30px;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+            margin-bottom: 36px;
+        }
+
+        .logo-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 84px;
+            height: 84px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #00E5FF, #0088CC);
+            margin-bottom: 22px;
+            box-shadow: 0 0 50px rgba(0, 229, 255, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 50px rgba(0, 229, 255, 0.4); }
+            50% { box-shadow: 0 0 70px rgba(0, 229, 255, 0.65); }
+        }
+
+        .logo-wrap svg {
+            width: 44px;
+            height: 44px;
+            stroke: #0A0E17;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+
+        .header .app-name {
+            font-size: 14px;
+            color: #00E5FF;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+        }
+
+        .header .page-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .header .last-updated {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 6px 18px;
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 20px;
+            font-size: 11px;
+            color: #00E5FF;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Policy card */
+        .policy-card {
+            background: rgba(17, 27, 46, 0.75);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            border-radius: 24px;
+            padding: 32px 28px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section {
+            padding-bottom: 22px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #00E5FF;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .section-body {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.7;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            margin-top: 22px;
+            padding: 16px 18px;
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .highlight-box .icon {
+            color: #00E5FF;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .highlight-box p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0 10px;
+            margin-top: 20px;
+        }
+
+        .footer .contact {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 8px;
+        }
+
+        .footer .contact a {
+            color: #00E5FF;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px 60px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+                letter-spacing: 1.5px;
+            }
+
+            .header .page-title {
+                font-size: 17px;
+            }
+
+            .policy-card {
+                padding: 24px 18px;
+            }
+
+            .section-title {
+                font-size: 13px;
+            }
+
+            .section-body {
+                font-size: 12.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-wrap">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="19" y1="5" x2="5" y2="19"></line>
+                    <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                    <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                </svg>
+            </div>
+            <h1>Privacy Policy</h1>
+            <div class="app-name">EASYCALC</div>
+            <div class="last-updated">Last updated: January 2025</div>
+        </div>
+
+        <!-- Policy content -->
+        <div class="policy-card">
+            <div class="section">
+                <div class="section-title">1. Introduction</div>
+                <div class="section-body">
+                    Welcome to EasyCalc. Your privacy is important to us. This app is designed
+                    to respect and protect your personal information. By using EasyCalc, you
+                    agree to this Privacy Policy.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">2. Information We Do NOT Collect</div>
+                <div class="section-body">
+                    EasyCalc does not collect, store, or transmit any personal information.
+                    We do not collect your name, email, phone number, location, or any other
+                    personal data.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">3. Calculations</div>
+                <div class="section-body">
+                    All calculations happen only on your device. The numbers you enter are
+                    never sent to any server, cloud, or third party. They are not saved after
+                    you close the app.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">4. Permissions</div>
+                <div class="section-body">
+                    EasyCalc does not request any device permissions. It does not access your
+                    camera, contacts, location, storage, microphone, photos, or any other
+                    sensitive data.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">5. Data Storage</div>
+                <div class="section-body">
+                    No data is stored anywhere outside your device. Once you close the app,
+                    all entered information is cleared and nothing is saved permanently.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">6. Third-Party Services</div>
+                <div class="section-body">
+                    This app does not use any third-party analytics, advertising, or tracking
+                    services. There are no SDKs that collect your information.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">7. Internet Connection</div>
+                <div class="section-body">
+                    EasyCalc works completely offline. It does not require an internet
+                    connection and does not send any data over the network.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">8. Children's Privacy</div>
+                <div class="section-body">
+                    This app does not knowingly collect any information from children under 13.
+                    Since no data is collected at all, it is safe for users of all ages.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">9. Data Security</div>
+                <div class="section-body">
+                    Since we do not collect any data, there is no risk of data breach or misuse.
+                    Your information stays only on your device.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">10. Changes to This Policy</div>
+                <div class="section-body">
+                    We may update this Privacy Policy from time to time. Any changes will be
+                    reflected within the app. Continued use of the app means you accept the
+                    updated policy.
+                </div>
+            </div>
+
+            <!-- Highlight -->
+            <div class="highlight-box">
+                <div class="icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <p>Your data never leaves your device.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+           
+            <div class="copyright">© 2025 EASYCALC — ALL RIGHTS RESERVED</div>
+        </div>
+    </div>
+</body>
+</html>
